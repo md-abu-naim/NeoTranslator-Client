@@ -3,10 +3,10 @@ import Sidebar from "../../Components/Sidebar";
 
 const Navber = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm px-8">
+        <div className="navbar bg-base-100 shadow-sm md:px-8">
             <Sidebar />
             <div className="navbar-center">
-                <Link to='/' className="btn btn-ghost text-3xl font-extrabold">NeoTranslator</Link>
+                <Link to='/' className="btn btn-ghost md:text-3xl mr-4 lg:mr-44 text-2xl font-extrabold">NeoTranslator</Link>
             </div>
             <div className="navbar-end">
                 <div className="dropdown dropdown-end rounded-full border-2 border-gray-400">
