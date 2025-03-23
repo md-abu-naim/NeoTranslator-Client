@@ -1,3 +1,5 @@
+import { IoCloseSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -13,6 +15,10 @@ const Sidebar = () => {
                 <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
                     {/* Sidebar content here */}
+                    <div className="flex items-center justify-between">
+                        <Link to='/' className="btn btn-ghost text-2xl font-extrabold">NeoTranslator</Link>
+                        <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay font-extrabold text-2xl border-2 rounded-full btn"><IoCloseSharp /></label>
+                    </div>
                     <li><a>Sidebar Item 1</a></li>
                     <li><a>Sidebar Item 2</a></li>
                 </ul>
