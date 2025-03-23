@@ -13,7 +13,7 @@ const Sidebar = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu bg-amber-200 text-base-content min-h-full w-80 p-4">
+                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
                     {/* Sidebar content here */}
                     <div className="flex items-center justify-between">
                         <Link to='/' className="btn btn-ghost text-2xl font-extrabold">NeoTranslator</Link>
