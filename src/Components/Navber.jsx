@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Sidebar from "../../Components/Sidebar";
+import Sidebar from "./Sidebar";
 
 const Navber = () => {
     return (

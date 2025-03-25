@@ -1,42 +1,43 @@
-import { useState } from "react";
-import { IoCloseSharp } from "react-icons/io5";
+// import { useState } from "react";
+// import { IoCloseSharp } from "react-icons/io5";
+
+import TextTranslate from "./TextTranslate";
 
 const Home = () => {
-    const [inputText, setInputText] = useState("");
-    const [translatedText, setTranslatedText] = useState("");
-    const [fromLang, setFromLang] = useState("English");
-    const [toLang, setToLang] = useState("Bangla");
-    const [fromDropdown, setFromDropdown] = useState(false);
-    const [toDropdown, setToDropdown] = useState(false);
+    // const [inputText, setInputText] = useState("");
+    // const [translatedText, setTranslatedText] = useState("");
+    // const [fromLang, setFromLang] = useState("English");
+    // const [toLang, setToLang] = useState("Bangla");
+    // const [fromDropdown, setFromDropdown] = useState(false);
+    // const [toDropdown, setToDropdown] = useState(false);
 
-    const languages = ["English", "Bangla", "Hindi", "Urdu", "Arabic", "Spanish"];
+    // const languages = ["English", "Bangla", "Hindi", "Urdu", "Arabic", "Spanish"];
 
     // Swap the languages
-    const swapLanguages = () => {
-        setFromLang(toLang);
-        setToLang(fromLang);
-        setInputText(translatedText);
-        setTranslatedText(inputText);
-    };
+    // const swapLanguages = () => {
+    //     setFromLang(toLang);
+    //     setToLang(fromLang);
+    //     setInputText(translatedText);
+    //     setTranslatedText(inputText);
+    // };
 
     // Close dropdown when language is selected
-    const selectFromLanguage = (lang) => {
-        setFromLang(lang);
-        setFromDropdown(false);
-    };
+    // const selectFromLanguage = (lang) => {
+    //     setFromLang(lang);
+    //     setFromDropdown(false);
+    // };
 
-    const selectToLanguage = (lang) => {
-        setToLang(lang);
-        setToDropdown(false);
-    };
+    // const selectToLanguage = (lang) => {
+    //     setToLang(lang);
+    //     setToDropdown(false);
+    // };
 
     return (
         <div>
             <h1 className="text-center text-3xl mb-4">Translate Your Favorite Language...</h1>
-            <div className="p-4">
-                {/* Language Select + Swap Button */}
+            <TextTranslate />
+            {/* <div className="p-4">
                 <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-center mb-4">
-                    {/* From Language Dropdown */}
                     <div className="relative w-full">
                         <div tabIndex={0} role="button" onClick={() => setFromDropdown(!fromDropdown)} className="btn w-full">
                             {fromLang} ⬇️
@@ -44,7 +45,6 @@ const Home = () => {
 
                         {fromDropdown && (
                             <ul className="absolute bg-base-100 rounded-box z-10 w-full p-2 shadow-sm mt-1">
-                                {/* Search & Close Button */}
                                 <div className="flex items-center justify-between gap-5 mb-2">
                                     <input type="search" placeholder="Search" className="input w-full p-2 border rounded" />
                                     <button onClick={() => setFromDropdown(false)} className="btn">
@@ -52,7 +52,6 @@ const Home = () => {
                                     </button>
                                 </div>
 
-                                {/* Language Options */}
                                 <div className="grid grid-cols-3 gap-2">
                                     {languages.map((lang) => (
                                         <li
@@ -68,7 +67,6 @@ const Home = () => {
                         )}
                     </div>
 
-                    {/* Swap Button */}
                     <button
                         onClick={swapLanguages}
                         className="p-2 bg-gray-200 rounded-full text-xl hover:bg-gray-300 w-12 h-12 flex items-center justify-center"
@@ -76,7 +74,6 @@ const Home = () => {
                         🔄
                     </button>
 
-                    {/* To Language Dropdown */}
                     <div className="relative w-full">
                         <div tabIndex={0} role="button" onClick={() => setToDropdown(!toDropdown)} className="btn w-full">
                             {toLang} ⬇️
@@ -84,7 +81,6 @@ const Home = () => {
 
                         {toDropdown && (
                             <ul className="absolute bg-base-100 rounded-box z-10 w-full p-2 shadow-sm mt-1">
-                                {/* Search & Close Button */}
                                 <div className="flex items-center justify-between gap-5 mb-2">
                                     <input type="search" placeholder="Search" className="input w-full p-2 border rounded" />
                                     <button onClick={() => setToDropdown(false)} className="btn">
@@ -92,7 +88,6 @@ const Home = () => {
                                     </button>
                                 </div>
 
-                                {/* Language Options */}
                                 <div className="grid grid-cols-3 gap-2">
                                     {languages.map((lang) => (
                                         <li
@@ -109,9 +104,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Translation Textareas */}
                 <div className="grid grid-cols-2 gap-4">
-                    {/* Input Textarea */}
                     <textarea
                         className="w-full h-40 p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
                         placeholder="Type or paste text here..."
@@ -119,15 +112,14 @@ const Home = () => {
                         onChange={(e) => setInputText(e.target.value)}
                     />
 
-                    {/* Output Textarea (Real-time Preview) */}
                     <textarea
                         className="w-full h-40 p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
                         placeholder="Translation will appear here..."
-                        value={inputText} // Input-এর সাথে সাথে আপডেট হবে
+                        value={inputText} 
                         readOnly
                     />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
