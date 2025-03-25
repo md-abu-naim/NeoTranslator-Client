@@ -1,4 +1,4 @@
-import { FaInfoCircle } from "react-icons/fa";
+import { FaHistory, FaInfoCircle } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { MdAddCall } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
@@ -42,6 +42,17 @@ const Sidebar = () => {
                         <MdAddCall className='w-5 h-5' />
 
                         <span className='mx-4 font-medium'>Contact Us</span>
+                    </NavLink>
+                    <NavLink
+                        to='/history'
+                        className={({ isActive }) =>
+                            `flex items-center px-4 py-2 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-black ${isActive ? 'bg-gray-400  text-black' : 'text-black'
+                            }`
+                        }
+                    >
+                        <FaHistory className='w-5 h-5' />
+
+                        <span className='mx-4 font-medium'>History</span>
                     </NavLink>
                 </ul>
             </div>
