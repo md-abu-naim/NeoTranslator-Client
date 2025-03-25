@@ -1,5 +1,7 @@
+import { FaInfoCircle } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { MdAddCall } from "react-icons/md";
+import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -19,8 +21,28 @@ const Sidebar = () => {
                         <Link to='/' className="btn btn-ghost text-2xl font-extrabold">NeoTranslator</Link>
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay font-extrabold text-2xl border-2 rounded-full btn"><IoCloseSharp /></label>
                     </div>
-                    <li><a>Sidebar Item 1</a></li>
-                    <li><a>Sidebar Item 2</a></li>
+                    <NavLink
+                        to='/about'
+                        className={({ isActive }) =>
+                            `flex items-center px-4 py-2 my-3  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-black ${isActive ? 'bg-gray-400  text-black' : 'text-black'
+                            }`
+                        }
+                    >
+                        <FaInfoCircle className='w-5 h-5' />
+
+                        <span className='mx-4 font-medium'>About Us</span>
+                    </NavLink>
+                    <NavLink
+                        to='/contact'
+                        className={({ isActive }) =>
+                            `flex items-center px-4 py-2 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-black ${isActive ? 'bg-gray-400  text-black' : 'text-black'
+                            }`
+                        }
+                    >
+                        <MdAddCall className='w-5 h-5' />
+
+                        <span className='mx-4 font-medium'>Contact Us</span>
+                    </NavLink>
                 </ul>
             </div>
         </div>
