@@ -8,7 +8,7 @@ const TextTranslate = () => {
     const [toLang, setToLang] = useState('English')
     const [inputText, setInputText] = useState('')
     const [translatedText, setTranslatedText] = useState('')
-    const [rows, setRows] = useState(3)
+    const [rows, setRows] = useState(5)
 
     const languages = ["English", "Bangla", "Hindi", "Urdu", "Arabic", "Spanish"];
 
@@ -25,12 +25,12 @@ const TextTranslate = () => {
         setToDropdown(false)
     }
 
-const handleInputChange = (e) => {
-    setInputText(e.target.value);
-    const lines = e.target.value.split("/n").length
-    setRows(lines < 3 ? 3 : lines)
+    const handleInputChange = (e) => {
+        setInputText(e.target.value);
+        const lines = e.target.value.split("\n").length;
+        setRows(lines < 5 ? 5 : lines);
 
-}
+    }
     return (
         <div className="">
             {/* DropDown button */}
@@ -95,20 +95,19 @@ const handleInputChange = (e) => {
             <div className="flex flex-col md:flex-row justify-between gap-4 items-center">
                 <textarea
                     onChange={handleInputChange}
-                    className="w-full h-40 p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
+                    className="w-full  p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
                     placeholder="Type or paste text here..."
                     rows={rows}
                 />
 
                 <textarea
-                    className="w-full h-40 p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
+                    className="w-full p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
                     placeholder="Translation will appear here..."
                     value={inputText}
                     rows={rows}
                     readOnly
                 />
             </div>
-
         </div>
     );
 };
