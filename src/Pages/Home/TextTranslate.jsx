@@ -4,16 +4,32 @@ import { IoCloseSharp } from "react-icons/io5";
 const TextTranslate = () => {
     const [fromDropdown, setFromDropdown] = useState(false)
     const [toDropdown, setToDropdown] = useState(false)
+    const [fromLang, setFromLang] = useState('Detect language ⬇️')
+    const [toLang, setToLang] = useState('English')
+    const [inputText, setInputText] = useState('')
+    const [translatedText, setTranslatedText] = useState('')
 
     const languages = ["English", "Bangla", "Hindi", "Urdu", "Arabic", "Spanish"];
 
+    // handle swap language
+    const handleSwapLanguage = () => {
+        setToLang(fromLang)
+        setFromLang(toLang)
+        setInputText(translatedText)
+        setTranslatedText(inputText)
+    }
+
+    const selectToLanguage = (lang) => {
+        setToLang(lang)
+        setToDropdown(false)
+    }
     return (
         <div className="p-4">
             {/* DropDown button */}
-            <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-center mb-4">
+            <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-center mb-2">
                 <div className="relative w-full">
                     <div onClick={() => setFromDropdown(!fromDropdown)} tabIndex={0} role="button" className="btn w-full">
-                        Detect language ⬇️
+                        {fromLang}
                     </div>
 
                     {
@@ -27,7 +43,7 @@ const TextTranslate = () => {
 
                             <div className="grid grid-cols-3 gap-2">
                                 {
-                                    languages.map(lang => <li onClick={() => setFromDropdown(false)} key={lang} className="text-center hover:bg-gray-200 rounded p-2 cursor-pointer"><a href="">{lang}</a></li>)
+                                    languages.map(lang => <li onClick={() => { setFromDropdown(false), setFromLang(lang) }} key={lang} className="text-center hover:bg-gray-200 rounded p-2 cursor-pointer"><a>{lang}</a></li>)
                                 }
                             </div>
                         </ul>
@@ -36,6 +52,7 @@ const TextTranslate = () => {
 
                 {/* Swap Button */}
                 <button
+                    onClick={handleSwapLanguage}
                     className="p-2 bg-gray-200 rounded-full text-xl hover:bg-gray-300 w-12 h-12 flex items-center justify-center"
                 >
                     🔄
@@ -44,7 +61,7 @@ const TextTranslate = () => {
                 {/* Detect Language */}
                 <div className="relative w-full">
                     <div onClick={() => setToDropdown(!toDropdown)} tabIndex={0} role="button" className="btn w-full">
-                        Detect language ⬇️
+                        {toLang}
                     </div>
 
                     {
@@ -58,7 +75,7 @@ const TextTranslate = () => {
 
                             <div className="grid grid-cols-3 gap-2">
                                 {
-                                    languages.map(lang => <li onClick={() => setToDropdown(false)} key={lang} className="text-center hover:bg-gray-200 rounded p-2 cursor-pointer"><a href="">{lang}</a></li>)
+                                    languages.map(lang => <li onClick={() => selectToLanguage(lang)} key={lang} className="text-center hover:bg-gray-200 rounded p-2 cursor-pointer"><a>{lang}</a></li>)
                                 }
                             </div>
                         </ul>
@@ -66,6 +83,21 @@ const TextTranslate = () => {
                 </div>
             </div>
 
+            {/* Textarea */}
+            <div className="flex justify-between gap-4 items-center">
+                <textarea
+                onChange={e => setInputText(e.target.value)}
+                    className="w-full h-40 p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
+                    placeholder="Type or paste text here..."
+                />
+
+                <textarea
+                    className="w-full h-40 p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
+                    placeholder="Translation will appear here..."
+                    value={inputText}
+                    readOnly
+                />
+            </div>
         </div>
     );
 };
