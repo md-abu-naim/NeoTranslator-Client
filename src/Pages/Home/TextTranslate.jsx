@@ -35,7 +35,7 @@ const TextTranslate = () => {
         <div className="">
             {/* DropDown button */}
             <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-center mb-2">
-                <div className="relative w-full">
+                <div className="md:relative md:w-full">
                     <div onClick={() => setFromDropdown(!fromDropdown)} tabIndex={0} role="button" className="btn w-full">
                         {fromLang}
                     </div>
@@ -67,13 +67,13 @@ const TextTranslate = () => {
                 </button>
 
                 {/* Detect Language */}
-                <div className="relative w-full">
+                <div className="md:relative md:w-full">
                     <div onClick={() => setToDropdown(!toDropdown)} tabIndex={0} role="button" className="btn w-full">
                         {toLang}
                     </div>
 
                     {
-                        toDropdown && <ul className="absolute bg-base-100 rounded-box z-10 w-full p-2 shadow-sm mt-1">
+                        toDropdown && <ul className="absolute left-0 md:left-auto bg-base-100 rounded-box z-10 w-full p-2 shadow-sm mt-1">
                             <div className="flex items-center justify-between gap-5 mb-2">
                                 <input type="search" placeholder="Search" className="input w-full p-2 border rounded" />
                                 <button onClick={() => setToDropdown(false)} className="btn">
