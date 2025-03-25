@@ -8,6 +8,7 @@ const TextTranslate = () => {
     const [toLang, setToLang] = useState('English')
     const [inputText, setInputText] = useState('')
     const [translatedText, setTranslatedText] = useState('')
+    const [rows, setRows] = useState(3)
 
     const languages = ["English", "Bangla", "Hindi", "Urdu", "Arabic", "Spanish"];
 
@@ -23,8 +24,15 @@ const TextTranslate = () => {
         setToLang(lang)
         setToDropdown(false)
     }
+
+const handleInputChange = (e) => {
+    setInputText(e.target.value);
+    const lines = e.target.value.split("/n").length
+    setRows(lines < 3 ? 3 : lines)
+
+}
     return (
-        <div className="p-4">
+        <div className="">
             {/* DropDown button */}
             <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-center mb-2">
                 <div className="relative w-full">
@@ -53,7 +61,7 @@ const TextTranslate = () => {
                 {/* Swap Button */}
                 <button
                     onClick={handleSwapLanguage}
-                    className="p-2 bg-gray-200 rounded-full text-xl hover:bg-gray-300 w-12 h-12 flex items-center justify-center"
+                    className="p-2 bg-gray-200 rounded-full text-xl hover:bg-gray-300 md:w-12 md:h-12 flex items-center justify-center"
                 >
                     🔄
                 </button>
@@ -84,20 +92,23 @@ const TextTranslate = () => {
             </div>
 
             {/* Textarea */}
-            <div className="flex justify-between gap-4 items-center">
+            <div className="flex flex-col md:flex-row justify-between gap-4 items-center">
                 <textarea
-                onChange={e => setInputText(e.target.value)}
+                    onChange={handleInputChange}
                     className="w-full h-40 p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
                     placeholder="Type or paste text here..."
+                    rows={rows}
                 />
 
                 <textarea
                     className="w-full h-40 p-4 text-lg focus:outline-none resize-none bg-gray-100 rounded"
                     placeholder="Translation will appear here..."
                     value={inputText}
+                    rows={rows}
                     readOnly
                 />
             </div>
+
         </div>
     );
 };
