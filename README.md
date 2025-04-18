@@ -1,2 +1,2 @@
 # NeoTranslator 
-## Expanding the ESLint configuration
+## A translator website..
