@@ -37,8 +37,8 @@ const Navber = () => {
                         </ul>
                     </div> :
                         <div className='flex gap-3'>
-                            <button type="submit" className="w-full font-bold bg-blue-500 text-white p-3 rounded-lg">SignIn</button>
-                            <button type="submit" className="w-full font-bold bg-blue-500 text-white p-3 rounded-lg">SignUp</button>
+                            <button type="submit" className="w-full font-bold bg-blue-500 hover:bg-blue-900 transition duration-300 text-white p-3 rounded-lg">SignIn</button>
+                            <button type="submit" className="w-full font-bold bg-blue-500 hover:bg-blue-900 transition duration-300 text-white p-3 rounded-lg">SignUp</button>
                         </div>
                 }
             </div>
