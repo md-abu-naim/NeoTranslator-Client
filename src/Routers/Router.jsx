@@ -7,6 +7,7 @@ import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import History from "../Pages/History/History";
 import Terms from "../Pages/Terms/Terms";
+import SignUp from "../Components/SignUp";
 
 
 
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
             {
                 path: '/terms',
                 element: <Terms />
+            },
+            {
+                path: 'signUp',
+                element: <SignUp />
             }
         ]
     },
