@@ -1,9 +1,18 @@
+import { useForm } from "react-hook-form"
 
 const SignUp = () => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm()
+
+    const onSubmit = (data) => console.log(data)
+
     return (
         <div className="flex justify-between items-center">
-            <div>
-                <img src="/src/assets/birdLogo.webp" alt="" />
+            <div className="bg-blue-300">
+                <img   src="/src/assets/birdLogo.webp" alt="" />
                 <div>
                     <h3>Lorem ipsum dolor sit amet.</h3>
                     <p>
@@ -12,7 +21,18 @@ const SignUp = () => {
                 </div>
             </div>
             <div>
+                <div>
+                    <img className="bg-black" src="/src/assets/NeoTranslatorLogo.webp" alt="" />
+                </div>
+                <form onSubmit={handleSubmit(onSubmit)} className="border" >
+                    <input placeholder="Full Name" {...register("name")} />
 
+                    <input placeholder="Email or Number" {...register("email", { required: true })} type="text" />
+                    <input placeholder="Password"  {...register("password", { required: true })} type="password" />
+                    {errors.exampleRequired && <span>This field is required</span>}
+
+                    <input type="submit" />
+                </form>
             </div>
         </div>
     );
