@@ -22,7 +22,9 @@ const SignUp = () => {
             </div>
             <div>
                 <div>
-                    <img className="bg-black" src="/src/assets/NeoTranslatorLogo.webp" alt="" />
+                    <h1>𝓝𝓮𝔀𝓣𝓻𝓪𝓷𝓼𝓵𝓪𝓽𝓸𝓻</h1>
+
+                    <h3>Welcome to NewTranslator</h3>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="border" >
                     <input placeholder="Full Name" {...register("name")} />
