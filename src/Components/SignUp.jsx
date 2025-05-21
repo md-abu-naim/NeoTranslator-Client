@@ -13,12 +13,12 @@ const SignUp = () => {
 
     return (
         <div className="flex justify-between">
-            <div className="bg-blue-300 w-[50%]">
-                <img src="/src/assets/birdLogo.webp" alt="" />
-                <div>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+            <div className="bg-blue-300 w-[50%] flex flex-col justify-center items-center">
+                <img className="h-[350px]" src="/src/assets/birdLogo.webp" alt="" />
+                <div className="text-center px-12 mt-10">
+                    <h3 className="text-2xl font-bold">Instant Translation, Anywhere.</h3>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id in ratione maiores est hic facere autem soluta inventore atque quibusdam veniam voluptatem, quas amet rerum!
+                        NeoTranslator lets you type in one language and instantly see it in another — fast, simple, and reliable.
                     </p>
                 </div>
             </div>
@@ -28,7 +28,7 @@ const SignUp = () => {
 
                     <h3 className="text-2xl my-4">Welcome to NewTranslator</h3>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)} className="" >
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-3" >
                     <div className="">
                         <label>User Full Name</label>
                         <input className="w-full outline-none border-b" placeholder="Full Name" {...register("name")} />
@@ -47,9 +47,9 @@ const SignUp = () => {
 
                 <div className="flex flex-col items-center justify-center">
                     <div className="divider">OR</div>
-                    <button className="flex items-center text-2xl"><FcGoogle /> Sign in with Google</button>
+                    <button className="btn border-none flex items-center text-2xl"><FcGoogle /> Sign in with Google</button>
 
-                    <p className="text-center">You have an account? Please <Link to='/signIn' className="underline text-blue-500">SignIn</Link> </p>
+                    <p className="text-center my-6">You have an account? Please <Link to='/signIn' className="underline text-blue-500">SignIn</Link> </p>
                 </div>
             </div>
         </div>
