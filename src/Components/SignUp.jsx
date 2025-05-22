@@ -26,7 +26,7 @@ const SignUp = () => {
                 <div className="text-center pb-3">  
                     <h1 className="font-bold text-3xl lg:py-7 py-2">𝓝𝓮𝓸𝓣𝓻𝓪𝓷𝓼𝓵𝓪𝓽𝓸𝓻</h1>
 
-                    <h3 className="text-2xl my-4">Welcome to <span className="underline">NewTranslator</span></h3>
+                    <h3 className="text-xl md:text-2xl my-4">SignUp now to start translating with <span className="underline">NewTranslator</span></h3>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 text-black" >
                     <div className="">

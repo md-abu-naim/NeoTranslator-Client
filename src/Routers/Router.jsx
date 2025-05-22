@@ -8,6 +8,7 @@ import Contact from "../Pages/Contact/Contact";
 import History from "../Pages/History/History";
 import Terms from "../Pages/Terms/Terms";
 import SignUp from "../Components/SignUp";
+import SignIn from "../Components/SignIn";
 
 
 
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
             {
                 path: 'signUp',
                 element: <SignUp />
+            },
+            {
+                path: 'signIn',
+                element: <SignIn />
             }
         ]
     },
