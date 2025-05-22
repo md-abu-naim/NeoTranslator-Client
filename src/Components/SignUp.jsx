@@ -42,8 +42,8 @@ const SignUp = () => {
                         <input className="w-full outline-none border-b border-gray-400" placeholder="Password"  {...register("password", { required: true })} type="password" />
                         {errors.exampleRequired && <span>This field is required</span>}
                     </div>
-                    <input type="submit" className="w-full font-bold bg-blue-500 hover:bg-blue-900 transition duration-300 text-white p-3 mt-3 rounded-4xl" />
-                </form>
+                    <input type="submit" value='SIGN UP' className="w-full font-bold bg-blue-500 hover:bg-blue-900 transition duration-300 text-white p-3 mt-3 rounded-4xl" />
+                </form> 
 
                 <div className="flex flex-col items-center justify-center">
                     <div className="divider">OR</div>
