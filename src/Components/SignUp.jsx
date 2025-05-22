@@ -12,17 +12,17 @@ const SignUp = () => {
     const onSubmit = (data) => console.log(data)
 
     return (
-        <div className="flex justify-between">
-            <div className="bg-blue-300 w-[50%] flex flex-col justify-center items-center">
-                <img className="h-[350px]" src="/src/assets/birdLogo.webp" alt="" />
-                <div className="text-center px-12 mt-10">
+        <div className="flex flex-col md:flex-row justify-between">
+            <div className="bg-blue-300 md:w-[50%] flex flex-col  items-center">
+                <img className="h-[450px]" src="/src/assets/NeoTranslatorLogo.webp" alt="" />
+                <div className="text-center md:px-12 ">
                     <h3 className="text-2xl font-bold">Instant Translation, Anywhere.</h3>
                     <p>
                         NeoTranslator lets you type in one language and instantly see it in another — fast, simple, and reliable.
                     </p>
                 </div>
             </div>
-            <div className="w-[50%] px-20">
+            <div className="md:w-[50%] md:px-20">
                 <div className="text-center pb-3">  
                     <h1 className="font-bold text-3xl py-7">𝓝𝓮𝓸𝓣𝓻𝓪𝓷𝓼𝓵𝓪𝓽𝓸𝓻</h1>
 
