@@ -23,7 +23,7 @@ const SignUp = () => {
                 </div>
             </div>
             <div className="w-[50%] px-20">
-                <div className="text-center pb-3">
+                <div className="text-center pb-3">  
                     <h1 className="font-bold text-3xl py-7">𝓝𝓮𝓸𝓣𝓻𝓪𝓷𝓼𝓵𝓪𝓽𝓸𝓻</h1>
 
                     <h3 className="text-2xl my-4">Welcome to <span className="underline">NewTranslator</span></h3>
