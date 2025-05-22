@@ -1,23 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const History = () => {
     return (
-        <div className="container mx-auto p-6">
-            <h1 className="text-3xl font-bold mb-4">Translation History</h1>
-            <ul className="space-y-3">
-                <li className="p-3 border rounded-lg shadow-sm bg-gray-100">
-                    <p className="font-semibold">Hello</p>
-                    <p className="text-gray-600">→ Hola</p>
-                </li>
-                <li className="p-3 border rounded-lg shadow-sm bg-gray-100">
-                    <p className="font-semibold">Good Morning</p>
-                    <p className="text-gray-600">→ Buenos días</p>
-                </li>
-                <li className="p-3 border rounded-lg shadow-sm bg-gray-100">
-                    <p className="font-semibold">How are you?</p>
-                    <p className="text-gray-600">→ ¿Cómo estás?</p>
-                </li>
-            </ul>
+        <div className="flex flex-col items-center p-5">
+            <img className='h-[250px]' src="/assets/QuestionMark.webp" alt="" />
+            <h2 className='text-3xl my-5 font-bold'>History Not Available</h2>
+            <Link to="/" className="font-bold bg-blue-500 hover:bg-blue-900 transition duration-300 text-white p-3 mt-3 rounded-lg" >Continue Translating</Link>
         </div>
     );
 };
