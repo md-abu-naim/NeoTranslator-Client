@@ -12,26 +12,26 @@ const SignUp = () => {
     const onSubmit = (data) => console.log(data)
 
     return (
-        <div className="flex flex-col md:flex-row justify-between">
-            <div className="bg-blue-300 md:w-[50%] flex flex-col  items-center">
-                <img className="h-[450px]" src="./assets/NeoTranslatorLogo.webp" alt="" />
-                <div className="text-center md:px-12 ">
+        <div className="flex flex-col lg:flex-row justify-between">
+            <div className="bg-blue-300 lg:w-[50%] h-[180px] md:h- flex flex-col  items-center">
+                <img className="lg:h-[450px] h-[200px]" src="/assets/NeoTranslatorLogo.webp" alt="" />
+                <div className="text-center md:px-12 hidden lg:block">
                     <h3 className="text-2xl font-bold">Instant Translation, Anywhere.</h3>
                     <p>
                         NeoTranslator lets you type in one language and instantly see it in another — fast, simple, and reliable.
                     </p>
                 </div>
             </div>
-            <div className="md:w-[50%] md:px-20">
+            <div className="lg:w-[50%] md:px-20 px-5">
                 <div className="text-center pb-3">  
-                    <h1 className="font-bold text-3xl py-7">𝓝𝓮𝓸𝓣𝓻𝓪𝓷𝓼𝓵𝓪𝓽𝓸𝓻</h1>
+                    <h1 className="font-bold text-3xl lg:py-7 py-2">𝓝𝓮𝓸𝓣𝓻𝓪𝓷𝓼𝓵𝓪𝓽𝓸𝓻</h1>
 
                     <h3 className="text-2xl my-4">Welcome to <span className="underline">NewTranslator</span></h3>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-3" >
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 text-black" >
                     <div className="">
                         <label>User Full Name</label>
-                        <input className="w-full outline-none border-b border-gray-400" placeholder="Full Name" {...register("name")} />
+                        <input className="w-full text-gray-800 outline-none border-b border-gray-400" placeholder="Full Name" {...register("name")} />
                     </div>
                     <div>
                         <label>User Email or Password</label>
