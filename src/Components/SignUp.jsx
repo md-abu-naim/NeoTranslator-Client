@@ -31,15 +31,15 @@ const SignUp = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-3" >
                     <div className="">
                         <label>User Full Name</label>
-                        <input className="w-full outline-none border-b" placeholder="Full Name" {...register("name")} />
+                        <input className="w-full outline-none border-b border-gray-400" placeholder="Full Name" {...register("name")} />
                     </div>
                     <div>
                         <label>User Email or Password</label>
-                        <input className="w-full outline-none border-b" placeholder="Email or Number" {...register("email", { required: true })} type="text" />
+                        <input className="w-full outline-none border-b border-gray-400" placeholder="Email or Number" {...register("email", { required: true })} type="text" />
                     </div>
                     <div>
                         <label>Password</label>
-                        <input className="w-full outline-none border-b" placeholder="Password"  {...register("password", { required: true })} type="password" />
+                        <input className="w-full outline-none border-b border-gray-400" placeholder="Password"  {...register("password", { required: true })} type="password" />
                         {errors.exampleRequired && <span>This field is required</span>}
                     </div>
                     <input type="submit" className="w-full font-bold bg-blue-500 hover:bg-blue-900 transition duration-300 text-white p-3 mt-3 rounded-4xl" />
