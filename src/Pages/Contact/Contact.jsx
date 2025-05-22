@@ -10,7 +10,7 @@ const Contact = () => {
                 <h1 className=" text-center border-b-2 border-blue-600 p-2 text-4xl font-bold">Contact Us</h1>
             </div>
             <div className="flex flex-col lg:flex-row lg:mt-8">
-                <div className=" p-4 mt-6 space-y-6 lg:w-1/2 text-center lg:text-start">
+                <div className="lg:w-[50%] p-4 mt-2 space-y-6 text-center lg:text-start">
                     <div>
                         <h3 className="text-black font-semibold text-2xl">Contact Us for Translation Support</h3>
                         <p >Have a question about our translation services, supported languages, or API integration? We’re here to help — reach out anytime.</p>
@@ -28,7 +28,7 @@ const Contact = () => {
                         <a href="https://www.facebook.com/farhanadnan.farabi.5" target="_blank" className="font-bold bg-blue-500 hover:bg-blue-900 transition duration-300 text-white p-3 rounded-lg"><FaFacebook className="text-2xl" /></a >
                     </div>
                 </div>
-                <div className="p-5 lg:border-l-2 border-blue-600 text-center lg:text-start">
+                <div className="lg:w-[50%] p-5 lg:border-l-2 border-blue-600 text-center lg:text-start">
                     <h3 className="text-black font-medium text-2xl">Let’s work together!</h3>
                     <p>Fill out the form below and our team will get back to you shortly. We’re here to help with anything related to NeoTranslator — 24/7.</p>
                     <form className="mt-4">
