@@ -13,7 +13,7 @@ const SignUp = () => {
 
     return (
         <div className="flex flex-col lg:flex-row justify-between">
-            <div className="bg-blue-300 lg:w-[50%] h-[180px] md:h- flex flex-col  items-center">
+            <div className="bg-blue-300 lg:w-[50%] h-[180px] lg:h-screen flex flex-col  items-center">
                 <img className="lg:h-[450px] h-[200px]" src="/assets/NeoTranslatorLogo.webp" alt="" />
                 <div className="text-center md:px-12 hidden lg:block">
                     <h3 className="text-2xl font-bold">Instant Translation, Anywhere.</h3>
