@@ -29,6 +29,10 @@ const SignIn = () => {
                             <h3 className="text-xl md:text-2xl my-4">SignIn now to start translating with <span className="underline">NewTranslator</span></h3>
                         </div>
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 text-black" >
+                            <div className="">
+                                <label>User Full Name</label>
+                                <input className="w-full text-gray-800 outline-none border-b border-gray-400" placeholder="Full Name" {...register("name")} />
+                            </div>
                             <div>
                                 <label>User Email or Password</label>
                                 <input className="w-full outline-none border-b border-gray-400" placeholder="Email or Number" {...register("email", { required: true })} type="text" />
